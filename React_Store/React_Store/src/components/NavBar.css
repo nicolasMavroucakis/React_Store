@@ -1,0 +1,43 @@
+.principal_nav{
+    font-family: 'Comico', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1400px;
+    margin: auto;
+}
+.big_screen_nav{
+    display: flex;
+    gap: 60px;
+}
+.big_nav_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big_nav_element a{
+    text-decoration: none;
+    color: #DB4A2B;
+    font-size: 1.5em;
+}
+.big_nav_element a:hover{
+    color: #25962b;
+}
+.logo{
+    width: 150px;
+}
+.nav_img{
+    width: 70px;
+    height: 70px;
+    background-color: #BABABA;
+    border-radius: 20px;
+    transition: .4s;
+}
+#big_nav_element_img img {
+    width: 50px;
+    height: 50px;
+}
+.big_nav_element_img:hover{
+    background-color: transparent;
+}

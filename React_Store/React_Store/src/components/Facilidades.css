@@ -1,0 +1,34 @@
+.facilidades_container{
+    font-family: sans-serif;
+    max-width: 1400px;
+    width: 90vw;
+    height: 140px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BABABA;
+    border-radius: 20px;
+}
+.fecilidades{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#facilidade_3{
+    margin-right: 20px;
+}
+#facilidade_1{
+    margin-left: 20px;
+}
+#facilidade_1 .facilidades_img img{
+    height: 80px;
+}
+#facilidade_3 .facilidades_img img{
+    height: 70px;
+}
+#facilidade_1 .facilidades_text h2{
+    margin: 5px 0;
+}
