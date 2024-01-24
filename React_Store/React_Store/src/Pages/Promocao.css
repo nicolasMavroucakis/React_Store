@@ -1,0 +1,38 @@
+.promocao_container_div{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    width: 90vw;
+    margin: auto;
+    gap: 50px;
+}
+.promocao_title{
+    color: #DB4A2B;
+}
+.produto_em_promocao{
+    width: 300px;
+    height: 470px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BABABA;
+    border-radius: 20px;
+}
+.prom_produtos{
+    display: flex;
+    max-width: 1400px;
+    width: 90vw;
+    margin: auto;
+}
+.produto_em_prom_text{
+    position: relative;
+    left: -40px;
+}
+#product_promocao_1 .produto_em_prom_text{
+    left: 0;
+}

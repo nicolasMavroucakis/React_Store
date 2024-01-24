@@ -2,5 +2,5 @@ html{
   background-color: #E4E2DD;
   margin: 0;
   padding: 0;
-
+  overflow-x: hidden;
 }

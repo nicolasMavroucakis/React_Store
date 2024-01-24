@@ -14,6 +14,7 @@ import Tenis_4 from '../assets/tenis_4.png'
 import Tenis_5 from '../assets/tenis_5.png'
 import Tenis_6 from '../assets/tenis_6.png'
 import Bone from '../assets/bone.png'
+import Search_box from '../components/Search_box';
 import { useGlobalState } from '../components/GlobalStateContext';
 
 const products = [
@@ -43,49 +44,55 @@ const Products = () => {
     };
 
     return (
-        <div className="products_container">
-            <div className="products_select_cat">
-                <div className={`categorias ${categoriaSelecionada === 'Todos' ? 'ativo' : ''}`}>
-                    <button onClick={() => setCategoriaSelecionada('Todos')}>Todos</button>
-                </div>
-                <div className={`categorias ${categoriaSelecionada === 'Tênis' ? 'ativo' : ''}`}>
-                    <button onClick={() => setCategoriaSelecionada('Tênis')}>Tênis</button>
-                </div>
-                <div className={`categorias ${categoriaSelecionada === 'Acessorio' ? 'ativo' : ''}`}>
-                    <button onClick={() => setCategoriaSelecionada('Acessorio')}>Acessórios</button>
-                </div>
-                <div className={`categorias ${categoriaSelecionada === 'Camisa' ? 'ativo' : ''}`}>
-                    <button onClick={() => setCategoriaSelecionada('Camisa')}>Camisas</button>
-                </div>
-                <div className={`categorias ${categoriaSelecionada === 'Moletom' ? 'ativo' : ''}`}>
-                    <button onClick={() => setCategoriaSelecionada('Moletom')}>Moletons</button>
-                </div>
+        <div className='products_prin_container'>
+            <div className='search_box_div'>
+                <Search_box/>
             </div>
-            <div className="products_products">
-                <AnimatePresence>
-                {filtrarProdutosPorCategoria().map((product) => (
-                    <motion.div
-                    key={product.id}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -50 }}
-                    className="product_motion_Div"
-                    transition={{ duration: .5 }}
-                    >
-                    <div className='product_text'>
-                        <h2>{product.name}</h2>
-                        <h2>{product.name_2}</h2>
-                        <h2>{product.price}</h2>
+            <div className="products_container">
+                <div className="products_select_cat">
+                    <div className={`categorias ${categoriaSelecionada === 'Todos' ? 'ativo' : ''}`}>
+                        <button onClick={() => setCategoriaSelecionada('Todos')}>Todos</button>
                     </div>
-                    <div className='product_img'>
-                        <img src={product.image}/>
+                    <div className={`categorias ${categoriaSelecionada === 'Tênis' ? 'ativo' : ''}`}>
+                        <button onClick={() => setCategoriaSelecionada('Tênis')}>Tênis</button>
                     </div>
-                    <div className='product_but'>
-                        <Link to={`/${product.to}`}>Detalhes</Link>
+                    <div className={`categorias ${categoriaSelecionada === 'Acessorio' ? 'ativo' : ''}`}>
+                        <button onClick={() => setCategoriaSelecionada('Acessorio')}>Acessórios</button>
                     </div>
-                    </motion.div>
-                ))}
-                </AnimatePresence>
+                    <div className={`categorias ${categoriaSelecionada === 'Camisa' ? 'ativo' : ''}`}>
+                        <button onClick={() => setCategoriaSelecionada('Camisa')}>Camisas</button>
+                    </div>
+                    <div className={`categorias ${categoriaSelecionada === 'Moletom' ? 'ativo' : ''}`}>
+                        <button onClick={() => setCategoriaSelecionada('Moletom')}>Moletons</button>
+                    </div>
+                </div>
+                <div className="products_products">
+                    
+                    <AnimatePresence>
+                    {filtrarProdutosPorCategoria().map((product) => (
+                        <motion.div
+                        key={product.id}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        className="product_motion_Div"
+                        transition={{ duration: .5 }}
+                        >
+                        <div className='product_text'>
+                            <h2>{product.name}</h2>
+                            <h2>{product.name_2}</h2>
+                            <h2>{product.price}</h2>
+                        </div>
+                        <div className='product_img'>
+                            <img src={product.image}/>
+                        </div>
+                        <div className='product_but'>
+                            <Link to={`/${product.to}`}>Detalhes</Link>
+                        </div>
+                        </motion.div>
+                    ))}
+                    </AnimatePresence>
+                </div>
             </div>
         </div>
     )

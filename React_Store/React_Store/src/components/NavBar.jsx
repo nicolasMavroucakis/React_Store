@@ -22,7 +22,7 @@ const NavBar = () => {
                     <NavLink to='/'>Home</NavLink>
                 </div>
                 <div className="big_nav_element">
-                    <NavLink to='/products'>Products</NavLink>
+                    <NavLink to='/products'>Produtos</NavLink>
                 </div>
                 <div className="big_nav_element nav_img" id="big_nav_element_img">
                     <img src={Carrinho} id="carrinho_img"/>

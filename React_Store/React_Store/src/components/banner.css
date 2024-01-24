@@ -1,0 +1,45 @@
+.banner_img img{
+    width: 500px;
+    
+}
+.banner_container{
+    font-family: sans-serif;
+    max-width: 1400px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.banner_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_text_emoji{
+    position: relative;
+    
+}
+.banner_text_emoji img {
+    width: 70px;
+}
+.emoji {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+.emoji.show {
+    opacity: 1;
+    animation: slideDown 3s ease-in-out infinite;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

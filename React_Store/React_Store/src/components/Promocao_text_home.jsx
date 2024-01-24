@@ -17,7 +17,7 @@ const Promocao_text_home = () => {
                     <h1>Promoção</h1>
                 </div>
                 <div id="promocao_title_2">
-                    <Link to='/products/promocao'>Saiba Mais</Link>
+                    <Link to='/promocao'>Saiba Mais</Link>
                 </div>
             </div>
             </motion.div>

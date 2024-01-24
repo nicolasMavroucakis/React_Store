@@ -1,3 +1,16 @@
+.products_prin_container{
+    max-width: 1440px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 30px;
+    margin: auto;
+}
+.search_box_div{
+    position: relative;
+    right: 50px;
+}
 .products_container{
     display: flex;
     justify-content: space-between;
