@@ -1,0 +1,17 @@
+.ad_car_but button{
+    font-family: sans-serif;
+    width: 400px;
+    height: 60px;
+    border-style: none;
+    background-color: #DB4A2B;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.ad_car_but{
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

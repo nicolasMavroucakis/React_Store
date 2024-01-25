@@ -1,0 +1,59 @@
+.Frete_container{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.truck_img img,.lock_img img{
+    width: 50px;
+    height: 50px;
+}
+.truck_img,.lock_img{
+    display: flex;
+    gap: 10px;
+}
+.lock_img{
+    margin-right: 30px;
+}
+.truck_img{
+    margin-left: 30px;
+}
+.info_frete{
+    width: 530px;
+    height: 80px;
+    background-color: #BABABA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+.frete_calc_input button img{
+    width: 50px;
+}
+.frete_calc_input button{
+    background-color: #DB4A2B;
+    border-style: none;
+    border-radius: 0 0 10px;
+}
+.info_empresa_frete{
+    display: flex;
+    width: 530px;
+    justify-content: space-between;
+}
+.frete_calc_input input{
+    width: 240px;
+    height: 50px;
+    border: none;
+}
+.frete_calc_input{
+    height: 50px;
+    display: flex;
+    align-items: start;
+}
+.frete_calc_text p{
+    font-weight: bold;
+    margin-left: 20px;
+}
+.info_frete_div{
+    border: 2px solid #BABABA;
+    border-radius: 10px;
+    overflow: hidden;
+}

@@ -22,14 +22,14 @@ const products = [
     { id: 'produto_2', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Nike ', price: 'R$ 499,99', image: Moletom_1, to: '/products/MoletomNike' },
     { id: 'produto_3', tipo_produto:'Acessorio',name: 'Gorro', name_2: 'Off-White', price: 'R$ 349,99', image: Gorro, to: '/products/GorroOff-White' },
     { id: 'produto_4', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Nike Air Max', price: 'R$ 999.99', image: Tenis_2, to: '/products/TênisNikeAirMax' },
-    { id: 'produto_5', tipo_produto:'Camisa',name: 'Camisa', name_2: 'Off-White', price: 'R$ 699.99', image: Moletom_2, to: '/products/CamisaOffWhite' },
+    { id: 'produto_5', tipo_produto:'Moletom',name: 'Camisa', name_2: 'Off-White', price: 'R$ 699.99', image: Moletom_2, to: '/products/moletomOffWhithe' },
     { id: 'produto_6', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Nike', price: 'R$ 759.99', image: Moletom_3, to: '/products/MoletomNike' },
-    { id: 'produto_7', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Jordan x JB', price: 'R$ 999.99', image: Moletom_4, to: '/products/TênisNikeAirForce' },
+    { id: 'produto_7', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Jordan x JB', price: 'R$ 999.99', image: Moletom_4, to: '/products/moletomJordanJB' },
     { id: 'produto_8', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: 'R$ 1.099.99', image: Tenis_4, to: '/products/TênisNikeAirForce' },
     { id: 'produto_9', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: 'R$ 1.299.99', image: Tenis_3, to: '/products/TênisNikeAirForce' },
     { id: 'produto_10',tipo_produto:'Tênis', name: 'Tênis', name_2: 'Jordan 7', price: 'R$ 1.199.99', image: Tenis_5, to: '/products/TênisNikeAirForce' },
     { id: 'produto_11',tipo_produto:'Tênis', name: 'Tênis', name_2: 'VANS', price: 'R$ 999.99', image: Tenis_6, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_12', tipo_produto:'Acessorio',name: 'Bonê', name_2: 'VANS Felpudo', price: 'R$ 999.99', image: Bone, to: '/products/TênisNikeAirForce' },
+    { id: 'produto_12', tipo_produto:'Acessorio',name: 'Bonê', name_2: 'VANS Felpudo', price: 'R$ 999.99', image: Bone, to: '/products/TênisNikeAirForce' }
 ]
 
 const Products = () => {
@@ -59,9 +59,6 @@ const Products = () => {
                     <div className={`categorias ${categoriaSelecionada === 'Acessorio' ? 'ativo' : ''}`}>
                         <button onClick={() => setCategoriaSelecionada('Acessorio')}>Acessórios</button>
                     </div>
-                    <div className={`categorias ${categoriaSelecionada === 'Camisa' ? 'ativo' : ''}`}>
-                        <button onClick={() => setCategoriaSelecionada('Camisa')}>Camisas</button>
-                    </div>
                     <div className={`categorias ${categoriaSelecionada === 'Moletom' ? 'ativo' : ''}`}>
                         <button onClick={() => setCategoriaSelecionada('Moletom')}>Moletons</button>
                     </div>
@@ -87,7 +84,7 @@ const Products = () => {
                             <img src={product.image}/>
                         </div>
                         <div className='product_but'>
-                            <Link to={`/${product.to}`}>Detalhes</Link>
+                            <Link to={`${product.to}`}>Detalhes</Link>
                         </div>
                         </motion.div>
                     ))}

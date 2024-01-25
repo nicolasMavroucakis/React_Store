@@ -7,6 +7,9 @@ import Footer from './components/Footer'
 import Home from './Pages/Home'
 import Products from './Pages/Products'
 import Moletom_jordan_jb from './products_pages/MoletoM_jordan_jb'
+import Moletom_off_white from './products_pages/Moletom_off_white'
+import Moletom_Anorak from './products_pages/Moletom_Anorak'
+import Tenis_Jordan7 from './products_pages/Tenis_Jordan7'
 
 // Components
 import NavBar from './components/NavBar'
@@ -24,6 +27,9 @@ function App() {
             <Route path='/products' element={<Products />} />
             <Route path='/promocao' element={<Promocao/>}/>
             <Route path='/products/moletomJordanJB' element={<Moletom_jordan_jb/>}/>
+            <Route path='/products/moletomOffWhithe' element={<Moletom_off_white/>}/>
+            <Route path='/products/MoletomAnorak' element={<Moletom_Anorak/>}/>
+            <Route path='/products/TenisJordan7'  element={<Tenis_Jordan7/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>

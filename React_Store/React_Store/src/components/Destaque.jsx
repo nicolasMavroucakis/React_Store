@@ -9,9 +9,9 @@ import './Destaque.css';
 
 const products = [
     { id: 'produto_destaque_1', name: 'Moletom' , name_2:'Jordan x J Balvin' , price: 'R$ 999,99' , image: Moletom_1 , to:'/products/moletomJordanJB' },
-    { id: 'produto_destaque_2', name: 'Moletom' , name_2:'Nike x Off-White' , price: 'R$ 999,99' , image: Moletom_2 , to:'/products/MoletomNikexOffWhite'},
-    { id: 'produto_destaque_3', name: 'Moletom' , name_2:'Anorak' , price: 'R$ 999,99' , image: Moletom_3 , to:'/products/MoletomAnokar'},
-    { id: 'produto_destaque_4', name: 'Tênis' , name_2:'Jordan 7' , price: 'R$ 1199.99' , image: Tenis_1 , to:'/products/CalçaCargoNike '},
+    { id: 'produto_destaque_2', name: 'Moletom' , name_2:'Nike x Off-White' , price: 'R$ 999,99' , image: Moletom_2 , to:'/products/moletomOffWhithe'},
+    { id: 'produto_destaque_3', name: 'Moletom' , name_2:'Anorak' , price: 'R$ 999,99' , image: Moletom_3 , to:'/products/MoletomAnorak'},
+    { id: 'produto_destaque_4', name: 'Tênis' , name_2:'Jordan 7' , price: 'R$ 1199.99' , image: Tenis_1 , to:'/products/TenisJordan7'},
 ];
 
 const Destaque = () => {

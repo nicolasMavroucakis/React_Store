@@ -1,0 +1,18 @@
+.container_tamnhos{
+    font-family: sans-serif;
+}
+.tamanhos_title p span{
+    font-weight: bold;
+}
+.tamanhos_selecionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.tamanho{
+    width: 63px;
+    text-align: center;
+    border: 2px solid #DB4A2B;
+    border-radius: 10px;
+}

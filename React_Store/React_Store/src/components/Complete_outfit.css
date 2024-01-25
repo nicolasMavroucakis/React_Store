@@ -1,0 +1,10 @@
+.complete_outfit_container{
+    font-family: sans-serif;
+    display: flex;
+    max-width: 1440px;
+    width: 90vw;
+    margin: auto;
+}
+#produtos_text{
+    margin: 0;
+}
