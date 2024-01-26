@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Tenis_1 from '../assets/tenis.png';
-import Moletom_1 from '../assets/moletom_4.png';
+import Moletom_1 from '../assets/Rick_Morty_1.png';
 import Gorro from '../assets/gorro_1.png';
 import Tenis_2 from '../assets/tenis_2.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Promocao_home.css';
 
 const products = [
-  { id: 'produto_promocao_1', name: 'Tênis', name_2: 'SB Dunk Low Pro', price: 'R$ 999,99', image: Tenis_1, to: '/products/TênisSBDunkLowPro' },
-  { id: 'produto_promocao_2', name: 'Moletom', name_2: 'Nike ', price: 'R$ 499,99', image: Moletom_1, to: '/products/MoletomNike' },
-  { id: 'produto_promocao_3', name: 'Gorro', name_2: 'Off-White', price: 'R$ 399,99', image: Gorro, to: '/products/GorroOff-White' },
-  { id: 'produto_promocao_4', name: 'Tênis', name_2: 'Nike Air Max', price: 'R$ 999.99', image: Tenis_2, to: '/products/TênisNikeAirForce' },
+  { id: 'produto_promocao_1', name: 'Tênis', name_2: 'SB Dunk Low Pro', price: 'R$ 999,99', second_price:'799,99', image: Tenis_1, to: '/products/TênisSBDunkLowPro' },
+  { id: 'produto_promocao_2', name: 'Moletom', name_2: 'Puma x RM', price: 'R$ 649,99', second_price:'549,99', image: Moletom_1, to: '/products/MoletomNike' },
+  { id: 'produto_promocao_3', name: 'Gorro', name_2: 'Off-White', price: 'R$ 399,99', second_price:'349,99',image: Gorro, to: '/products/GorroOff-White' },
+  { id: 'produto_promocao_4', name: 'Tênis', name_2: 'Nike Air Max', price: 'R$ 999.99', second_price:'799,99', image: Tenis_2, to: '/products/TênisNikeAirForce' },
 ];
 
 const Promocao_home = () => {
@@ -31,13 +31,17 @@ const Promocao_home = () => {
                         <div className='produtos_text'>
                             <h2>{product.name}</h2>
                             <h2>{product.name_2}</h2>
-                            <h2>{product.price}</h2>
+                            <div className='product_descont_price'>
+                                <h2>{product.price}</h2>
+                                <h2>-</h2>
+                                <h2 id='descont_price'>{product.second_price}</h2>
+                            </div>
                         </div>
                         <div className='produtos_img'>
                             <img src={product.image}/>
                         </div>
                         <div className='produto_but'>
-                            <Link to={`/${product.to}`}>Detalhes</Link>
+                            <Link to={`${product.to}`}>Detalhes</Link>
                         </div>
                     </motion.div>
                 ))}

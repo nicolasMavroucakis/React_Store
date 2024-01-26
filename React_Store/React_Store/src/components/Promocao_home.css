@@ -46,3 +46,10 @@
 .produtos_text{
     margin-left: 40px;
 }
+.product_descont_price{
+    display: flex;
+    gap: 5px;
+}
+#descont_price{
+    color: rgb(188, 2, 2);
+}

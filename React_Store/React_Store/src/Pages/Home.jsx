@@ -5,7 +5,7 @@ import Facilidades from '../components/Facilidades'
 import Promocao_home from '../components/Promocao_home'
 import Promocao_text_home from '../components/Promocao_text_home'
 import Banner from '../components/banner'
-import { GlobalStateProvider } from '../components/GlobalStateContext'
+
 
 
 const Home = () => {

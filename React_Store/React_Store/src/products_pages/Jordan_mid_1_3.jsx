@@ -1,12 +1,12 @@
-import Slider from "../components/Slider"
-import './Moletom_jordan_jb.css'
 import Complete_outfit from "../components/complete_outfit"
 import Tamanho_tenis from "../components/Tamanho_tenis"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
+import Slider from "../components/Slider"
+import './Moletom_off_white.css'
 
-const Tenis_Jordan7 = () => {
-    return (
+const Jordan_mid_1_3 = () => {
+    return(
         <div className="jb_container">
             <div className="jb_product_container">
                 <div id="slider_img_jb">
@@ -14,8 +14,8 @@ const Tenis_Jordan7 = () => {
                 </div>
                 <div id="jb_info">
                     <div className="produto_name">
-                        <h1>Tênis Jordan 7</h1>
-                        <h1>R$ 1.899,99</h1>
+                        <h1>TÊNIS AIR JORDAN 1 MID</h1>
+                        <h1>R$ 1.299,99</h1>
                     </div>
                     <Tamanho_tenis/>
                     <Compr_but/>
@@ -29,4 +29,4 @@ const Tenis_Jordan7 = () => {
         </div>
     )
 }
-export default Tenis_Jordan7
+export default Jordan_mid_1_3

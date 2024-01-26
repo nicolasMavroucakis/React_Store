@@ -8,10 +8,10 @@ import './Promocao.css';
 
 const Promocao = () => {
     const products = [
-        {id:'product_promocao_1', name:'Tênis', subname:'SB Dunk Low Pro', image:Tenis_1, to:'/product/tenisSBDunkLowPro'},
-        {id:'product_promocao_2', name:'Moletom', subname:'Nike', image:Moletom, to:'/product/moletomNike'},
-        {id:'product_promocao_3', name:'Gorro', subname:'Off-White', image:Gorro, to:'/product/gorroOffWhite'},
-        {id:'product_promocao_4', name:'Tênis', subname:'Nike Air Max', image:Tenis_2, to:'/product/tenisNikeAirMax'}
+        {id:'product_promocao_1', name:'Tênis', subname:'SB Dunk Low Pro', price: 'R$ 999,99', second_price:'799,99', image:Tenis_1, to:'/product/tenisSBDunkLowPro'},
+        {id:'product_promocao_2', name:'Moletom', subname:'Nike', price: 'R$ 999,99', second_price:'799,99', image:Moletom, to:'/product/moletomNike'},
+        {id:'product_promocao_3', name:'Gorro', subname:'Off-White', price: 'R$ 999,99', second_price:'799,99', image:Gorro, to:'/product/gorroOffWhite'},
+        {id:'product_promocao_4', name:'Tênis', subname:'Nike Air Max', price: 'R$ 999,99', second_price:'799,99', image:Tenis_2, to:'/product/tenisNikeAirMax'}
     ]
 
     return(
@@ -33,7 +33,11 @@ const Promocao = () => {
                             <div className='produto_em_prom_text'>
                                 <h2>{product.name}</h2>
                                 <h2>{product.subname}</h2>
-                                <h2>{product.price}</h2>
+                                <div className='product_descont_price'>
+                                    <h2>{product.price}</h2>
+                                    <h2>-</h2>
+                                    <h2 id='descont_price'>{product.second_price}</h2>
+                                </div>
                             </div>
                             <div className='produtos_img'>
                                 <img src={product.image}/>

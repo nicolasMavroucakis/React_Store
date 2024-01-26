@@ -23,7 +23,6 @@ const Banner = () => {
         <AnimatePresence>
             <div className="banner_container">
             <motion.div
-                key="banner_text"
                 initial={{opacity: 0, x:-50}}
                 animate={{ opacity: 1, x:0}}
                 className='banner_text'

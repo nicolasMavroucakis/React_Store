@@ -29,10 +29,6 @@
     width: 90vw;
     margin: auto;
 }
-.produto_em_prom_text{
-    position: relative;
-    left: -40px;
-}
 #product_promocao_1 .produto_em_prom_text{
     left: 0;
 }
