@@ -3,8 +3,16 @@ import './NavBar.css'
 import Logo from "../assets/logo.png"
 import Carrinho from '../assets/carrinho.png'
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
+
+
 
 const NavBar = () => {
+    
+  
+
 
     return (
         <nav className="principal_nav">
@@ -25,7 +33,10 @@ const NavBar = () => {
                     <NavLink to='/products'>Produtos</NavLink>
                 </div>
                 <div className="big_nav_element nav_img" id="big_nav_element_img">
-                    <img src={Carrinho} id="carrinho_img"/>
+                    <div>
+                        <Link to='/carrinho'><img src={Carrinho} id="carrinho_img"/></Link>
+                    </div>
+                    
                 </div>
             </div>
         </nav>

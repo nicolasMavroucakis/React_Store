@@ -5,7 +5,9 @@ import Frete from "../components/Frete"
 import Slider from "../components/Slider"
 import './Moletom_off_white.css'
 
+
 const Tenis_Dunk_Low_Pro = () => {
+
     return (
         <div className="jb_container">
             <div className="jb_product_container">

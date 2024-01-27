@@ -18,6 +18,7 @@ import Jordan_mid_1_2 from './products_pages/Jordan_mid_1_2'
 import Jordan_mid_1_3 from './products_pages/Jordan_mid_1_3'
 import Tenis_VANS from './products_pages/Tenis_VANS'
 import Bone_Vans from './products_pages/BoneVANS'
+import Carrinho from './Pages/Carrinho'
 
 // Components
 import NavBar from './components/NavBar'
@@ -45,7 +46,8 @@ function App() {
             <Route path='/products/JordanMid1_2' element={<Jordan_mid_1_2/>}/>
             <Route path='/products/JordanMid1_3' element={<Jordan_mid_1_3/>}/>
             <Route path='/products/TenisVANS' element={<Tenis_VANS/>}/>
-            <Route path='/products/BoneVANS' element={<Bone_Vans/>}/>
+            <Route path='/products/BoneVANS' element={<Bone_Vans/>}/> 
+            <Route path='/carrinho' element={<Carrinho/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>

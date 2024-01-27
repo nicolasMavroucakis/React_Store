@@ -1,0 +1,27 @@
+.card_screen_div{
+    font-family: sans-serif;
+    max-width: 1440px;
+    width: 90vw;
+    margin: auto;
+}
+.produtos_do_carrinho{
+    max-width: 1440px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid grey;
+}
+.produto_do_carrinho_remove button img{
+    width: 60px;
+    background-color: transparent;
+}
+.produto_do_carrinho_remove button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.produto_do_carrinho_img img{
+    width: 280px;
+}
