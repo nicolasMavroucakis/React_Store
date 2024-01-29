@@ -25,3 +25,8 @@
 .produto_do_carrinho_img img{
     width: 280px;
 }
+.total_value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

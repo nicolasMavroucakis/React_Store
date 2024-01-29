@@ -1,26 +1,20 @@
-import './Compr_but.css'
-import { useLocation } from "react-router-dom"
-import { useState } from 'react'
-
-
-
+import React, { useContext } from 'react';
+import ChangeCarrinho from './ChangeCarrinho';
+import { CarrinhoContext } from '../context/CarrinhoContext';
+import { useLocation } from 'react-router-dom';
 
 const Compr_but = () => {
-    const location = useLocation()
-    const pathname = location.pathname
+    const { troca_array} = useContext(ChangeCarrinho);
 
-    const [TenisSBDunkLowPro, setTenisSBDunkLowPro] = useState(false)
-
-    function HandleClick () {
-        if (pathname == '/products/TenisSBDunkLowPro' ) {
-            setTenisSBDunkLowPro(true)     
-        }
-    }
+    const troca_arry = () => {
+        troca_array()
+    };
 
     return (
         <div className="ad_car_but">
-            <button onClick={HandleClick}>Adicionar ao Carrinho</button>
+            <button onClick={troca_array}>Adicionar ao Carrinho</button>
         </div>
     )
 }
-export default Compr_but
+
+export default Compr_but;

@@ -8,6 +8,7 @@
     border-radius: 10px;
     font-size: 1.3em;
     font-weight: bold;
+    cursor: pointer;
 }
 .ad_car_but{
     width: 530px;
