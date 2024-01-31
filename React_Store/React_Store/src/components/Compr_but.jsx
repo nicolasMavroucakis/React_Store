@@ -5,9 +5,10 @@ import { useLocation } from 'react-router-dom';
 import './Compr_but.css'
 
 const Compr_but = () => {
-    const location = useLocation() // nao posso usar hooks dentro de funcoes no react
+    const location = useLocation() 
     const {pathname} = location
     const {all_produtos, produtos_carrinho} = useContext(CarrinhoContext)
+    
 
     const add_card = () => {
         const produtoEncontrado = all_produtos.find((produto) => produto.to === location.pathname && !produto.carrinho);

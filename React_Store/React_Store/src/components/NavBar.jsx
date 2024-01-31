@@ -10,9 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const NavBar = () => {
-    
-  
-
 
     return (
         <nav className="principal_nav">
@@ -36,7 +33,6 @@ const NavBar = () => {
                     <div>
                         <Link to='/carrinho'><img src={Carrinho} id="carrinho_img"/></Link>
                     </div>
-                    
                 </div>
             </div>
         </nav>

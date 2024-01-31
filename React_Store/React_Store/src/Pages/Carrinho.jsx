@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { CarrinhoContext } from '../context/CarrinhoContext';
 import { useContext } from 'react';
-import Remove_but from '../components/remove_but';
+
 
 // fotos
 import Tenis_1 from '../assets/PG_Dunk_low_1.png';
@@ -22,7 +22,8 @@ import Bone from '../assets/bone.png'
 import Remove from '../assets/remove-cart.png'
 
 const Carrinho = () => {
-    const {all_products, produtos_carrinho} = useContext(CarrinhoContext)
+    const {all_products,setAllProdutos,setProdutosCarrinho, produtos_carrinho} = useContext(CarrinhoContext)
+    
     let [valor_total, setValorTotal] = useState(0)
     
     useEffect(() => {
@@ -32,6 +33,7 @@ const Carrinho = () => {
             const valor_string = product.price
             const valor = parseFloat(valor_string)
             total = total + valor
+            total.toFixed(2)
         });
     
         setValorTotal(total) 
@@ -41,9 +43,12 @@ const Carrinho = () => {
         console.log('Produtos no carrinho foram modificados:', produtos_carrinho);
     }, [produtos_carrinho]);
 
-    const remove_product = () => { 
-
-    }
+    const removerProduto = (productId) => {
+        
+        const novoCarrinho = produtos_carrinho.filter((produto) => produto.id !== productId);
+        
+        setProdutosCarrinho(novoCarrinho);
+    };
 
     return (
         <div className="card_screen_div">
@@ -80,7 +85,7 @@ const Carrinho = () => {
                                 </select>
                             </div>
                             <div className='produto_do_carrinho_remove'>
-                                <button  id={product.id}>
+                                <button onClick={() => removerProduto(product.id)} id={product.id}>
                                     <img src={Remove} alt="Remove" />
                                 </button>
                             </div>
@@ -92,10 +97,18 @@ const Carrinho = () => {
                     </div>
                 )}
             </AnimatePresence>
-            <div className='total_value'>
-                <h1>Valor Total =</h1>
-                <h1>{'R$ ' + valor_total}</h1>
-            </div>
+            <AnimatePresence>
+                <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="total_value"
+                transition={{ duration: 0.7, delay: .5 }}
+                >
+                    <h1>Valor Total =</h1>
+                    <h1>{'R$ ' + valor_total}</h1>
+                </motion.div>
+
+            </AnimatePresence>
         </div>
     )
 }
