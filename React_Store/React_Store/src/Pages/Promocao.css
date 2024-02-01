@@ -32,3 +32,9 @@
 #product_promocao_1 .produto_em_prom_text{
     left: 0;
 }
+@media(max-width:400px) {
+    .prom_produtos{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

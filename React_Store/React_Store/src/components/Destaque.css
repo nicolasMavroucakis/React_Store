@@ -46,3 +46,8 @@
 .produtos_text{
     margin-left: 40px;
 }
+@media(max-width:400px) {
+    .produtos_destaque_container{
+        flex-direction: column;
+    }
+}

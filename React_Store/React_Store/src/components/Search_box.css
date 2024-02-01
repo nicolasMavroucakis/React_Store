@@ -30,4 +30,10 @@
 }
 #input_text:focus {
     border-style: none;
-  }
+}
+@media (max-width:400px) {
+    .input_search_box{
+        justify-content: end;
+        align-items: center;
+    }
+}

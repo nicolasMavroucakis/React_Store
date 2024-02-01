@@ -22,6 +22,9 @@ const NavBar = () => {
             <div>
                 <img src={Logo} className="logo"/>
             </div>
+            <div className="small_screen_nav">
+                
+            </div>
             <div className="big_screen_nav">
                 <div className="big_nav_element">
                     <NavLink to='/'>Home</NavLink>

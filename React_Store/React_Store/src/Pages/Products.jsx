@@ -19,6 +19,9 @@ const Products = () => {
 
     return (
         <div className='products_prin_container'>
+            <div className='title_products'>
+                <h1>Products</h1>
+            </div>
             <div className='search_box_div'>
                 <Search_box />
             </div>

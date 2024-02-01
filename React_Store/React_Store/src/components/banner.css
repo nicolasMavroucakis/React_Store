@@ -42,3 +42,25 @@
         transform: translateY(0);
     }
 }
+@media (max-width:400px) {
+    .banner_container{
+        flex-direction: column;
+    }
+    .banner_text_text h1{
+        font-size: 1.7em;
+    }
+    .banner_text_text{
+        position: relative;
+        left: -30px;
+    }
+    .banner_img img{
+        width: 90vw;
+    }
+    .banner_text_emoji img{
+        width: 50px;
+    }
+    .banner_text_emoji{
+        position: relative;
+        left: -20px;
+    }
+}
