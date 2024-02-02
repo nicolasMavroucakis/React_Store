@@ -1,5 +1,3 @@
-import './Tamanho_unico.css'
-
 const Tamanho_unico = () => {
     return (
         <div className='container_tamanhos'>

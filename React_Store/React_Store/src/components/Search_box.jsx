@@ -1,23 +1,24 @@
 import './Search_box.css';
 import { CarrinhoContext } from '../context/CarrinhoContext';
 import { useContext, useState } from 'react';
+import { useRef } from 'react';
 
 const Search_box = () => {
-    const { searchBox, setSearchBox, products } = useContext(CarrinhoContext)
+    const { searchBox, setSearchBox, all_produtos } = useContext(CarrinhoContext)
     const [inputValue, setInputValue] = useState('')
+    const input = useRef(null)
 
-    function limparBotao() {
-        setInputValue('')
-    }
+    const searchProductsGenerator = () => {
+        const input_value = input.current.value.toLowerCase()
 
-    function searchProductsGenerator() {
-        const filteredProducts = products.filter((product) => {
-            const productName = product.name + product.name_2
-            return productName.toLowerCase().includes(inputValue.toLowerCase())
-        })
+        const filteredProducts = all_produtos.filter((product) => {
+            const productName = product.full_name.toLowerCase()
+
+            return productName.includes(input_value)
+        });
 
         setSearchBox(filteredProducts)
-    }
+    };
 
     return (
         <form action="" className='input_search_box'>
@@ -25,12 +26,12 @@ const Search_box = () => {
                 type="text"
                 placeholder="Search"
                 id='input_text'
-                value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                ref={input}
             />
             <input type="button" id='imput_submit' onClick={searchProductsGenerator} />
         </form>
-    )
-}
+    );
+};
 
 export default Search_box;

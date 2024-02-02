@@ -11,23 +11,23 @@ const Compr_but = () => {
     
 
     const add_card = () => {
-        const produtoEncontrado = all_produtos.find((produto) => produto.to === location.pathname && !produto.carrinho);
+        const produtoEncontrado = all_produtos.find((produto) => produto.to === location.pathname && !produto.carrinho)
 
         if (produtoEncontrado) {
-            produtoEncontrado.carrinho = true;
+            produtoEncontrado.carrinho = true
             produtos_carrinho.push(produtoEncontrado)
             console.log(produtos_carrinho)
-            console.log('Produto adicionado ao carrinho:', produtoEncontrado);
+            console.log('Produto adicionado ao carrinho:', produtoEncontrado)
         }
     };
     useEffect(() => {
         if (produtos_carrinho.length === 0) {
-            const produtoParaCarrinho = all_produtos.find((produto) => produto.carrinho === true);
+            const produtoParaCarrinho = all_produtos.find((produto) => produto.carrinho === true)
             if (produtoParaCarrinho) {
-                produtos_carrinho.push(produtoParaCarrinho);
+                produtos_carrinho.push(produtoParaCarrinho)
             }
         }
-    }, [all_produtos, produtos_carrinho]);
+    }, [all_produtos, produtos_carrinho])
     
     return (
         <div className="ad_car_but">

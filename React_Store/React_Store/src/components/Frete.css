@@ -25,6 +25,9 @@
     align-items: center;
     border-radius: 10px 10px 0 0;
 }
+.info_frete_div{
+  width: 530px;
+}
 .frete_calc_input button img{
     width: 50px;
 }

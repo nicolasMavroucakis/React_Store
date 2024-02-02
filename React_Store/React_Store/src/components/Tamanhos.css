@@ -16,3 +16,11 @@
     border: 2px solid #DB4A2B;
     border-radius: 10px;
 }
+.tamanho:hover {
+    background-color: #DB4A2B;
+    color: white;
+}
+.selecionado{
+    background-color: #DB4A2B;
+    color: white;
+}

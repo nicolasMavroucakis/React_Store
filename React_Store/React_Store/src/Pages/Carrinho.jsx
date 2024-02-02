@@ -1,53 +1,38 @@
-import './Carrinho.css'
+import React, { useContext, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { CarrinhoContext } from '../context/CarrinhoContext';
-import { useContext } from 'react';
-
-
-// fotos
-import Tenis_1 from '../assets/PG_Dunk_low_1.png';
-import Moletom_1 from '../assets/Rick_Morty_1.png';
-import Gorro from '../assets/gorro_Jor_1.png';
-import Tenis_2 from '../assets/Jodan_1.png';
-import Moletom_2 from '../assets/moletom_2.png'
-import Moletom_3 from '../assets/moletom_3.png'
-import Moletom_4 from '../assets/moletom_1.png'
-import Tenis_3 from '../assets/tenis_3.png'
-import Tenis_4 from '../assets/tenis_4.png'
-import Tenis_5 from '../assets/tenis_5.png'
-import Tenis_6 from '../assets/tenis_6.png'
-import Bone from '../assets/bone.png'
-import Remove from '../assets/remove-cart.png'
+import Remove from '../assets/remove-cart.png';
+import './Carrinho.css'
 
 const Carrinho = () => {
-    const {all_products,setAllProdutos,setProdutosCarrinho, produtos_carrinho} = useContext(CarrinhoContext)
-    
-    let [valor_total, setValorTotal] = useState(0)
-    
-    useEffect(() => {
-        let total = 0
-    
-        produtos_carrinho.forEach((product) => {
-            const valor_string = product.price
-            const valor = parseFloat(valor_string)
-            total = total + valor
-            total.toFixed(2)
-        });
-    
-        setValorTotal(total) 
-    }, [produtos_carrinho])
+    const { produtos_carrinho, setProdutosCarrinho } = useContext(CarrinhoContext)
+    const [valoresSelecionados, setValoresSelecionados] = useState({})
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
-        console.log('Produtos no carrinho foram modificados:', produtos_carrinho);
-    }, [produtos_carrinho]);
+        let total = 0;
+
+        produtos_carrinho.forEach((product) => {
+            const quantidade = valoresSelecionados[product.id] || 1;
+            const valor = parseFloat(product.price.replace('R$', '').replace(',', '.'))
+
+            total += valor * quantidade;
+        })
+
+        setTotal(total.toFixed(2));
+    }, [produtos_carrinho, valoresSelecionados]);
+
+    const handleSelecao = (event, productId) => {
+        const quantidadeSelecionada = event.target.value;
+        setValoresSelecionados({
+            ...valoresSelecionados,
+            [productId]: parseInt(quantidadeSelecionada, 10) || 1,
+        })
+    }
 
     const removerProduto = (productId) => {
-        
-        const novoCarrinho = produtos_carrinho.filter((produto) => produto.id !== productId);
-        
-        setProdutosCarrinho(novoCarrinho);
+        const novoCarrinho = produtos_carrinho.filter((produto) => produto.id !== productId)
+        setProdutosCarrinho(novoCarrinho)
     };
 
     return (
@@ -70,18 +55,19 @@ const Carrinho = () => {
                                 <div className='produto_do_carrinho_textprice'>
                                     <h2>{product.name + ' ' + product.name_2}</h2>
                                     <h2>{'R$' + ' ' + product.price}</h2>
+                                    <h2>Tamanho: {product.tamanho}</h2>
                                     <label>Quantidade</label>
-                                    <select id="estado" name="estado">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
+                                    <select
+                                        id="estado"
+                                        name="estado"
+                                        value={valoresSelecionados[product.id] || 1}
+                                        onChange={(e) => handleSelecao(e, product.id)}
+                                    >
+                                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((quantidade) => (
+                                            <option key={quantidade} value={quantidade}>
+                                                {quantidade}
+                                            </option>
+                                        ))}
                                     </select>
                                 </div>
                                 <div className='produto_do_carrinho_remove'>
@@ -100,17 +86,17 @@ const Carrinho = () => {
             </AnimatePresence>
             <AnimatePresence>
                 <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="total_value"
-                transition={{ duration: 0.7, delay: .5 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="total_value"
+                    transition={{ duration: 0.7, delay: .5 }}
                 >
                     <h1>Valor Total </h1>
-                    <h1>{'R$ ' + valor_total}</h1>
+                    <h1>{'R$ ' + total}</h1>
                 </motion.div>
-
             </AnimatePresence>
         </div>
     )
 }
-export default Carrinho
+
+export default Carrinho;

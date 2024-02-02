@@ -6,7 +6,8 @@ import Search_box from '../components/Search_box';
 import { CarrinhoContext } from '../context/CarrinhoContext';
 
 const Products = () => {
-    const { products, searchBox } = useContext(CarrinhoContext);
+    const { products } = useContext(CarrinhoContext);
+    const { searchBox, setSearchBox} = useContext(CarrinhoContext)
     const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todos');
 
     const filtrarProdutosPorCategoria = () => {
@@ -15,6 +16,11 @@ const Products = () => {
         } else {
             return products.filter(product => product.tipo_produto === categoriaSelecionada);
         }
+    }
+
+    const handleCategoriaSelecionada = (categoria) => {
+        setCategoriaSelecionada(categoria)
+        setSearchBox([])
     }
 
     return (
@@ -26,20 +32,20 @@ const Products = () => {
                 <Search_box />
             </div>
             <div className="products_container">
-                <div className="products_select_cat">
-                    <div className={`categorias ${categoriaSelecionada === 'Todos' ? 'ativo' : ''}`}>
-                        <button onClick={() => setCategoriaSelecionada('Todos')}>Todos</button>
-                    </div>
-                    <div className={`categorias ${categoriaSelecionada === 'Tênis' ? 'ativo' : ''}`}>
-                        <button onClick={() => setCategoriaSelecionada('Tênis')}>Tênis</button>
-                    </div>
-                    <div className={`categorias ${categoriaSelecionada === 'Acessorio' ? 'ativo' : ''}`}>
-                        <button onClick={() => setCategoriaSelecionada('Acessorio')}>Acessórios</button>
-                    </div>
-                    <div className={`categorias ${categoriaSelecionada === 'Moletom' ? 'ativo' : ''}`}>
-                        <button onClick={() => setCategoriaSelecionada('Moletom')}>Moletons</button>
-                    </div>
+            <div className="products_select_cat">
+                <div className={`categorias ${categoriaSelecionada === 'Todos' ? 'ativo' : ''}`}>
+                    <button onClick={() => handleCategoriaSelecionada('Todos')}>Todos</button>
                 </div>
+                <div className={`categorias ${categoriaSelecionada === 'Tênis' ? 'ativo' : ''}`}>
+                    <button onClick={() => handleCategoriaSelecionada('Tênis')}>Tênis</button>
+                </div>
+                <div className={`categorias ${categoriaSelecionada === 'Acessorio' ? 'ativo' : ''}`}>
+                    <button onClick={() => handleCategoriaSelecionada('Acessorio')}>Acessórios</button>
+                </div>
+                <div className={`categorias ${categoriaSelecionada === 'Moletom' ? 'ativo' : ''}`}>
+                    <button onClick={() => handleCategoriaSelecionada('Moletom')}>Moletons</button>
+                </div>
+            </div>
                 <div className="products_products">
                     <AnimatePresence>
                         {searchBox.length > 0 ? (
