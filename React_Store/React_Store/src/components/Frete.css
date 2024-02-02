@@ -57,3 +57,68 @@
     border-radius: 10px;
     overflow: hidden;
 }
+@media (max-width:400px) {
+  .truck_img img{
+    width: 40px;
+  }  
+  .truck_img {
+    display: flex;
+    align-items: center;
+  }
+  .lock_img{
+    display: flex;
+    align-items: center;
+  }
+  .info_frete_div{
+    width: 90vw;
+  }
+  .info_frete{
+    width: 90vw;
+  }
+  .info_empresa_frete{
+    width: 90vw;
+  }
+  .frete_calc_input input {
+    width: 140px;
+  }
+  .frete_calc_text{
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+  }
+}
+@media (min-width:401px) and (max-width:576px){
+  .truck_img img{
+    width: 40px;
+  }  
+  .truck_img {
+    display: flex;
+    align-items: center;
+  }
+  .lock_img{
+    display: flex;
+    align-items: center;
+  }
+  .info_frete_div{
+    width: 90vw;
+  }
+  .info_frete{
+    width: 90vw;
+  }
+  .info_empresa_frete{
+    width: 90vw;
+  }
+  .frete_calc_input input {
+    width: 140px;
+  }
+  .frete_calc_text{
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+  }
+}
+@media (min-width:577px) and (max-width:767px) {
+  .info_frete_div{
+    width: 530px;
+  }
+}

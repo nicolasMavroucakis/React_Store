@@ -101,3 +101,103 @@
         margin: 10px 0;
     } 
 }
+@media (min-width:401px) and (max-width:576px){
+    .footer_conteudo{
+        flex-direction: column;
+        height: 100vh;
+        justify-content: none;
+    }
+    .footer_div{
+        height: 1000px;
+    }
+    .footer_saber_form{
+        width: 80vw;
+    }
+    .footer_map_logo{
+        width: 80vw;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .footer_saber_form{
+        height: 240px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_saber_form_text p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .footer_saber_form_form form{
+        margin: 10px 0;
+    }
+}
+@media (min-width:577px) and (max-width:767px) {
+    .footer_conteudo{
+        width: 100vw;
+        height: 600px;
+        justify-content: none;
+    }
+    .footer_div{
+        height: 700px;
+        width: 100vw;
+    }
+    .footer_saber_form{
+        width: 80vw;
+        margin-left: 20px;
+    }
+    .footer_map_logo{
+        width: 80vw;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .footer_saber_form{
+        height: 240px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_saber_form_text p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .footer_saber_form_form form{
+        margin: 10px 0;
+    }
+}
+@media (min-width:768px) and (max-width:968px) {
+    .footer_conteudo{
+        width: 100vw;
+        height: 600px;
+        justify-content: none;
+    }
+    .footer_div{
+        height: 700px;
+        width: 100vw;
+    }
+    .footer_saber_form{
+        width: 80vw;
+        margin-left: 20px;
+    }
+    .footer_map_logo{
+        width: 80vw;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .footer_saber_form{
+        height: 240px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_saber_form_text p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .footer_saber_form_form form{
+        margin: 10px 0;
+    }
+}

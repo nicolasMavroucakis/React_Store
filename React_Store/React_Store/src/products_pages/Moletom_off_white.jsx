@@ -1,4 +1,4 @@
-import './Moletom_off_white.css'
+
 import Complete_outfit from "../components/complete_outfit"
 import Tamanhos from "../components/tamanhos"
 import Compr_but from "../components/Compr_but"

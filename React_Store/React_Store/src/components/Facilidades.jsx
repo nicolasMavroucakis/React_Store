@@ -13,33 +13,45 @@ const facilities = [
 
 const Facilidades = () => {
     return (
-        <motion.div
-            className='facilidades_container'
+        <div>
+            <motion.div
+            className='facilidades_title'
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: .5, delay:.5 }}
-            
-        >
-            <AnimatePresence>
-                {facilities.map((facility) => (
-                    <div
-                        key={facility.id}
-                        className='facilidades'
-                        id={facility.id}
-                        style={{ display: 'flex', alignItems: 'center', gap: '20px' }}
-                    >
-                        <div className='facilidades_img'>
-                            <img src={facility.image} alt='' />
+            >
+                <h1>Facilidades</h1>
+            </motion.div>
+            <motion.div
+                className='facilidades_container'
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: .5, delay:.5 }}
+                
+            >
+                <AnimatePresence>
+                    
+                    {facilities.map((facility) => (
+                        <div
+                            key={facility.id}
+                            className='facilidades'
+                            id={facility.id}
+                            style={{ display: 'flex', alignItems: 'center', gap: '20px' }}
+                        >
+                            <div className='facilidades_img'>
+                                <img src={facility.image} alt='' />
+                            </div>
+                            <div className='facilidades_text'>
+                                <h2>{facility.title}</h2>
+                                <h2>{facility.subtitle}</h2>
+                            </div>
                         </div>
-                        <div className='facilidades_text'>
-                            <h2>{facility.title}</h2>
-                            <h2>{facility.subtitle}</h2>
-                        </div>
-                    </div>
-                ))}
-            </AnimatePresence>
-        </motion.div>
+                    ))}
+                </AnimatePresence>
+            </motion.div>
+        </div>
     );
 };
 

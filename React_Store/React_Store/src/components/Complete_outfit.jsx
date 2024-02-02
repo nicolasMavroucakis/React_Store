@@ -13,22 +13,22 @@ import Tenis_4 from '../assets/tenis_4.png'
 import Tenis_5 from '../assets/tenis_5.png'
 import Tenis_6 from '../assets/tenis_6.png'
 import Bone from '../assets/bone.png'
-import './Complete_outfit.css';
+import'./Complete_outfit.css'
 
 const Complete_outfit = () => {
   const initialProducts = [
-    { id: 'produto_1', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Dunk Low Pro', price: 'R$ 999,99', image: Tenis_1, to: '/products/TênisSBDunkLowPro' },
-    { id: 'produto_2', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Nike ', price: 'R$ 499,99', image: Moletom_1, to: '/products/MoletomNike' },
-    { id: 'produto_3', tipo_produto:'Acessorio',name: 'Gorro', name_2: 'Off-White', price: 'R$ 349,99', image: Gorro, to: '/products/GorroOff-White' },
-    { id: 'produto_4', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Nike Air Max', price: 'R$ 999.99', image: Tenis_2, to: '/products/TênisNikeAirMax' },
-    { id: 'produto_5', tipo_produto:'Camisa',name: 'Camisa', name_2: 'Off-White', price: 'R$ 699.99', image: Moletom_2, to: '/products/CamisaOffWhite' },
-    { id: 'produto_6', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Nike', price: 'R$ 759.99', image: Moletom_3, to: '/products/MoletomNike' },
-    { id: 'produto_7', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Jordan x JB', price: 'R$ 999.99', image: Moletom_4, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_8', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: 'R$ 1.099.99', image: Tenis_4, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_9', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: 'R$ 1.299.99', image: Tenis_3, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_10',tipo_produto:'Tênis', name: 'Tênis', name_2: 'Jordan 7', price: 'R$ 1.199.99', image: Tenis_5, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_11',tipo_produto:'Tênis', name: 'Tênis', name_2: 'VANS', price: 'R$ 699.99', image: Tenis_6, to: '/products/TênisNikeAirForce' },
-    { id: 'produto_12', tipo_produto:'Acessorio',name: 'Bonê', name_2: 'VANS Felpudo', price: 'R$ 999.99', image: Bone, to: '/products/TênisNikeAirForce' }
+    { id: 'produto_1', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Dunk Low Pro', price: '999,99', image: Tenis_1, to: '/products/TenisSBDunkLowPro', carrinho:false },
+        { id: 'produto_2', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Puma x RM ', price: '649,99', image: Moletom_1, to: '/products/MoletomPumaRM', carrinho:false },
+        { id: 'produto_3', tipo_produto:'Acessorio',name: 'Gorro', name_2: 'Jordan', price: '349,99', image: Gorro, to: '/products/GorroJordan', carrinho:false },
+        { id: 'produto_4', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Air Jordan 1', price: '999.99', image: Tenis_2, to: '/products/JordanMid1', carrinho:false },
+        { id: 'produto_5', tipo_produto:'Moletom',name: 'Camisa', name_2: 'Off-White', price: '699.99', image: Moletom_2, to: '/products/moletomOffWhithe', carrinho:false },
+        { id: 'produto_6', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Nike Anorak', price: '759.99', image: Moletom_3, to: '/products/MoletomAnorak', carrinho:false },
+        { id: 'produto_7', tipo_produto:'Moletom',name: 'Moletom', name_2: 'Jordan x JB', price: '999.99', image: Moletom_4, to: '/products/moletomJordanJB', carrinho:false },
+        { id: 'produto_8', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: '1.099.99', image: Tenis_4, to: '/products/JordanMid1_2', carrinho:false  },
+        { id: 'produto_9', tipo_produto:'Tênis',name: 'Tênis', name_2: 'Jordan Mid', price: '1.299.99', image: Tenis_3, to: '/products/JordanMid1_3', carrinho:false},
+        { id: 'produto_10',tipo_produto:'Tênis', name: 'Tênis', name_2: 'Jordan 7', price: '1.899.99', image: Tenis_5, to: '/products/TenisJordan7',carrinho:false },
+        { id: 'produto_11',tipo_produto:'Tênis', name: 'Tênis', name_2: 'VANS', price: '899.99', image: Tenis_6, to: '/products/TenisVANS', carrinho:false},
+        { id: 'produto_12', tipo_produto:'Acessorio',name: 'Bonê', name_2: 'VANS Felpudo', price: '999.99', image: Bone, to: '/products/BoneVANS', carrinho:false }
   ];
 
   const [selectedProducts, setSelectedProducts] = useState([]);

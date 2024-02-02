@@ -1,5 +1,6 @@
 import ImageSlider from "./ImageSlider";
 import { useLocation } from "react-router-dom"
+import { useState, useEffect } from 'react'
 
 import Foto_1 from '../assets/JB_1.png'
 import Foto_2 from '../assets/JB_2.png'
@@ -65,6 +66,19 @@ const Slider = () => {
 
     const location = useLocation();
     const { pathname } = location;
+
+    const [larguraTela, setLarguraTela] = useState(window.innerWidth);
+
+    const verificarTamanhoDaTela = () => {
+      setLarguraTela(window.innerWidth);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("resize", verificarTamanhoDaTela);
+      return () => {
+        window.removeEventListener("resize", verificarTamanhoDaTela);
+      };
+    }, []);
 
     if (pathname == '/products/moletomJordanJB') {
         slides = [
@@ -162,11 +176,22 @@ const Slider = () => {
             {url:Foto_47, title: "Imagem 1"}
         ]
     }
+
     const containerStyles = {
     width: "500px",
     height: "480px",
     margin: "0 auto",
     };
+
+    if (larguraTela <= 400) {
+        containerStyles.width = "300px";
+        containerStyles.height = "280px";
+    }
+    else if (larguraTela >= 401 && larguraTela <= 576){
+        containerStyles.width = "400px";
+        containerStyles.height = "380px";
+    }
+
 
     return (
         <div>

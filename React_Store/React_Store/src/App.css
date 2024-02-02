@@ -7,6 +7,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.Routes{
+    min-height: 70vh;
+}
 @media(max-width:400px) {
     .container{
        max-width: 400px;

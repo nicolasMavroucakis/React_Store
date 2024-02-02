@@ -3,7 +3,7 @@ import Tamanho_tenis from "../components/Tamanho_tenis"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
 import Slider from "../components/Slider"
-import './Moletom_off_white.css'
+
 
 
 const Jordan_Mid = () => {

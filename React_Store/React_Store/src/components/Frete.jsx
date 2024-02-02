@@ -29,14 +29,6 @@ const Frete = () => {
                     </div>
                 </div>
             </div>
-            <div className="calc_frete">
-                <div className="text_calc_frete">
-
-                </div>
-                <div className="input_cep_frete">
-
-                </div>
-            </div>
         </div>
     )
 }

@@ -3,7 +3,6 @@ import Tamanhos from "../components/tamanhos"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
 import Slider from "../components/Slider"
-import './Moletom_off_white.css'
 
 const Moletom_Puma_RM = () => {
     return(

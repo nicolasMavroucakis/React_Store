@@ -16,3 +16,21 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width:400px) {
+    .ad_car_but button{
+        width: 300px;
+    }
+    .ad_car_but{
+        margin: auto;
+        width: 300px;
+    }
+}
+@media (min-width:401px) and (max-width:576px){
+    .ad_car_but button{
+        width: 300px;
+    }
+    .ad_car_but{
+        margin: auto;
+        width: 300px;
+    }
+}

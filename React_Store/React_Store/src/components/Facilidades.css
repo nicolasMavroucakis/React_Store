@@ -35,6 +35,10 @@
 #facilidade_1 .facilidades_text h2{
     margin: 5px 0;
 }
+.facilidades_title{
+    font-family: sans-serif;
+    color: #DB4A2B;
+}
 @media (max-width:400px) {
     .facilidades_container{
         flex-wrap: wrap;
@@ -50,5 +54,70 @@
     }
     #facilidade_1{
         margin-left: 0;
+    }
+}
+@media (min-width:401px) and (max-width:576px){
+    .facilidades_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 400px;
+    }
+    .facilidades{
+        width: 80vw;
+        justify-content: space-between;
+    }
+    #facilidade_3{
+        margin-right: 0;
+    }
+    #facilidade_1{
+        margin-left: 0;
+    }
+    #facilidade_3 img{
+        width: 70px;
+        margin-left: 10px;
+    }
+}
+@media (min-width: 577px) and (max-width:767px){
+    .facilidades_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 400px;
+    }
+    .facilidades{
+        width: 80vw;
+        justify-content: space-between;
+        font-size: 1.4em;
+    }
+    .facilidades_img img{
+        width: 120px;
+    }
+    #facilidade_3{
+        margin-right: 0;
+    }
+    #facilidade_1{
+        margin-left: 0;
+    }
+    #facilidade_3 img{
+        width: 90px;
+        margin-left: 10px;
+    }
+}
+@media(min-width:768px) and (max-width:967px) {
+    #facilidade_3 img{
+        width: 90px;
+        margin-left: 10px;
+    }
+    .facilidades_container{
+        justify-content: space-between;
+        
+    }
+    #facilidade_3{
+        margin-right: 0;
+    }
+    #facilidade_1{
+        margin-left: 20px;
+    }
+    #facilidade_2 {
+        margin-left: 10px;
     }
 }

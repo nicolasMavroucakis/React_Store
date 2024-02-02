@@ -55,7 +55,6 @@ const Carrinho = () => {
             <AnimatePresence>
                 {produtos_carrinho.length > 0 ? (
                     produtos_carrinho.map((product) => (
-    
                         <motion.div
                             key={product.id}
                             initial={{ opacity: 0, y: 50 }}
@@ -67,33 +66,35 @@ const Carrinho = () => {
                             <div className='produto_do_carrinho_img'>
                                 <img src={product.image} alt={product.name + ' ' + product.name_2} />
                             </div>
-                            <div className='produto_do_carrinho_textprice'>
-                                <h2>{product.name + ' ' + product.name_2}</h2>
-                                <h2>{'R$' + ' ' + product.price}</h2>
-                                <label>Quantidade</label>
-                                <select id="estado" name="estado">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
-                            <div className='produto_do_carrinho_remove'>
-                                <button onClick={() => removerProduto(product.id)} id={product.id}>
-                                    <img src={Remove} alt="Remove" />
-                                </button>
+                            <div className='text_but'>
+                                <div className='produto_do_carrinho_textprice'>
+                                    <h2>{product.name + ' ' + product.name_2}</h2>
+                                    <h2>{'R$' + ' ' + product.price}</h2>
+                                    <label>Quantidade</label>
+                                    <select id="estado" name="estado">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div className='produto_do_carrinho_remove'>
+                                    <button onClick={() => removerProduto(product.id)} id={product.id}>
+                                        <img src={Remove} alt="Remove" />
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     ))
                 ) : (
                     <div className='nao_temos_produtos'>
-                        <h1>Não temos produtos no carrinho.</h1>
+                        <h1>Não há produtos no carrinho.</h1>
                     </div>
                 )}
             </AnimatePresence>
@@ -104,7 +105,7 @@ const Carrinho = () => {
                 className="total_value"
                 transition={{ duration: 0.7, delay: .5 }}
                 >
-                    <h1>Valor Total =</h1>
+                    <h1>Valor Total </h1>
                     <h1>{'R$ ' + valor_total}</h1>
                 </motion.div>
 

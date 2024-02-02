@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Tenis_1 from '../assets/tenis.png';
-import Moletom_1 from '../assets/Rick_Morty_1.png';
-import Gorro from '../assets/gorro_1.png';
-import Tenis_2 from '../assets/tenis_2.png';
+import Tenis_1 from '../assets/tenis_3.png'
+import Moletom from '../assets/Rick_Morty_1.png';
+import Gorro from '../assets/gorro_Jor_1.png'
+import Tenis_2 from '../assets/Tenis_VANS_3.png'
 import { motion, AnimatePresence } from 'framer-motion';
 import './Promocao_home.css';
 
 const products = [
-  { id: 'produto_promocao_1', name: 'Tênis', name_2: 'SB Dunk Low Pro', price: 'R$ 999,99', second_price:'799,99', image: Tenis_1, to: '/products/TênisSBDunkLowPro' },
-  { id: 'produto_promocao_2', name: 'Moletom', name_2: 'Puma x RM', price: 'R$ 649,99', second_price:'549,99', image: Moletom_1, to: '/products/MoletomNike' },
-  { id: 'produto_promocao_3', name: 'Gorro', name_2: 'Off-White', price: 'R$ 399,99', second_price:'349,99',image: Gorro, to: '/products/GorroOff-White' },
-  { id: 'produto_promocao_4', name: 'Tênis', name_2: 'Nike Air Max', price: 'R$ 999.99', second_price:'799,99', image: Tenis_2, to: '/products/TênisNikeAirForce' },
+    {id:'product_promocao_1', name:'Tênis', subname:'SB Dunk Low Pro', price: 'R$ 1299,99', second_price:'1.099,99', image:Tenis_1, to:'/products/JordanMid1_3'},
+    {id:'product_promocao_2', name:'Moletom', subname:'Nike', price: 'R$ 999,99', second_price:'799,99', image:Moletom, to:'/products/moletomNike'},
+    {id:'product_promocao_3', name:'Gorro', subname:'Jordan', price: 'R$ 359,99', second_price:'299,99', image:Gorro, to:'/products/GorroJordan'},
+    {id:'product_promocao_4', name:'Tênis', subname:'VANS', price: 'R$ 899,99', second_price:'699,99', image:Tenis_2, to:'/products/TenisVANS'}
 ];
 
 const Promocao_home = () => {

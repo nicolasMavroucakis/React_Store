@@ -18,3 +18,49 @@
 .complete_outfit_div_title h1{
     color: #DB4A2B;
 }
+@media (max-width:400px) {
+    .jb_product_container{
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .produto_name h1{
+        font-size: 1.5em;
+    }
+}
+@media (min-width:401px) and (max-width:576px) {
+    .jb_product_container{
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .produto_name h1{
+        font-size: 1.7em;
+    }
+}
+@media (min-width:577px) and (max-width:767px) {
+    .jb_product_container{
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .produto_name h1{
+        font-size: 1.9em;
+    }
+}
+@media (min-width: 768px) and (max-width:967px) {
+    .jb_product_container{
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .produto_name h1{
+        font-size: 1.9em;
+    }
+}
+@media (min-width:968px) and (max-width:1200px) {
+    .jb_product_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 90vw;
+    }
+    .produto_name h1{
+        font-size: 1.9em;
+    }
+}
