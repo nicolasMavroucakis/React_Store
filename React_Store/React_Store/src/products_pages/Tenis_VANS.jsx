@@ -3,11 +3,19 @@ import Tamanho_tenis from "../components/Tamanho_tenis"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
 import Slider from "../components/Slider"
+import { AnimatePresence,motion } from "framer-motion"
 
 const Tenis_VANS = () => {
     return (
-        <div className="jb_container">
-            <div className="jb_product_container">
+        <AnimatePresence>
+            <motion.div
+                key='produto'
+                initial={{opacity: 0, y: 50}}
+                animate={{opacity: 1, y: 0}}
+                className="jb_container"
+                transition={{duration:.5}}
+            >
+                <div className="jb_product_container">
                 <div id="slider_img_jb">
                     <Slider/>
                 </div>
@@ -21,11 +29,25 @@ const Tenis_VANS = () => {
                     <Frete/>
                 </div>
             </div>
-            <div className="complete_outfit_div_title">
+            </motion.div>
+            <motion.div
+                key='produto'
+                initial={{opacity: 0, y: 50}}
+                animate={{opacity: 1, y: 0}}
+                className="complete_outfit_div_title"
+                transition={{duration:.5, delay: .5}}
+            >
                 <h1>Complete seu Outfit</h1>
-            </div>
-            <Complete_outfit/>
-        </div>
+            </motion.div>
+            <motion.div
+                key='produto'
+                initial={{opacity: 0, y: 50}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration:.5, delay: 1}}
+            >
+                <Complete_outfit/>
+            </motion.div>
+        </AnimatePresence>
     )
 }
 export default Tenis_VANS
