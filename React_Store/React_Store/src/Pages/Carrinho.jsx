@@ -91,8 +91,8 @@ const Carrinho = () => {
                     className="total_value"
                     transition={{ duration: 0.7, delay: .5 }}
                 >
-                    <h1>Valor Total </h1>
-                    <h1>{'R$ ' + total}</h1>
+                    <h1>Valor Total = </h1>
+                    <h1>{' R$ ' + total}</h1>
                 </motion.div>
             </AnimatePresence>
         </div>

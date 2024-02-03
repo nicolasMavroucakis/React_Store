@@ -13,22 +13,19 @@
 @media(max-width:400px) {
     .complete_outfit_container{
         width: 90vw;
-        overflow-x: auto;
-        white-space: nowrap;
+        flex-wrap: wrap;       
     }
 }
 @media (min-width:401px) and (max-width:576px){
     .complete_outfit_container{
         width: 90vw;
-        overflow-x: auto;
-        white-space: nowrap;
+        flex-wrap: wrap;   
     }
 }
 @media (min-width:577px) and (max-width:767px) {
     .complete_outfit_container{
         width: 90vw;
-        overflow-x: auto;
-        white-space: nowrap;
+        flex-wrap: wrap; 
     }
     .complete_outfit_container::-webkit-scrollbar-thumb{
         color: black;
@@ -37,7 +34,6 @@
 @media (min-width: 768px) and (max-width: 967px) {
     .complete_outfit_container{
         width: 90vw;
-        overflow-x: auto;
-        white-space: nowrap;
+        flex-wrap: wrap;   
     }
 }
