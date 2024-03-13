@@ -8,6 +8,8 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
+import User_foto from '../assets/user.png'
+import User from "../Pages/User";
 
 
 
@@ -31,6 +33,9 @@ const NavBar = () => {
 				<img src={Logo}/>
 			</div>
             <div className="carrinho_hamburguer">
+                <div className="user_div">
+                    <Link to='/user'><img src={User_foto}/></Link>
+                </div>
                 <div className="big_nav_element nav_img" id="big_nav_element_img">
                     <div className="carrinho_img">
                         <Link to='/carrinho'><img src={Carrinho} id="carrinho_img"/></Link>
@@ -38,7 +43,7 @@ const NavBar = () => {
                 </div>
                 <nav ref={navRef} className="opcoes_Navbar">
                     <Link to='/' onClick={showNavbar} id="home_link">Home</Link>
-                    <Link to='/products' onClick={showNavbar} id="products_link">Products</Link>
+                    <Link to='/products' onClick={showNavbar} id="products_link">Produtos</Link>
                     <button
                         className="nav-btn nav-close-btn"
                         onClick={showNavbar}>
@@ -57,16 +62,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-{/* <Helmet>
-                <link
-                rel="stylesheet"
-                href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap"
-                />
-            </Helmet> */}
-
-            // <div className="big_nav_element nav_img" id="big_nav_element_img">
-            //         <div>
-            //             <Link to='/carrinho'><img src={Carrinho} id="carrinho_img"/></Link>
-            //         </div>
-            //     </div>
