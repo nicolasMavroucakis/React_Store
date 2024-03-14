@@ -20,6 +20,7 @@ import Tenis_VANS from './products_pages/Tenis_VANS'
 import Bone_Vans from './products_pages/BoneVANS'
 import Carrinho from './Pages/Carrinho'
 import User from './Pages/User'
+import Login from './Pages/Login'
 
 // Components
 import NavBar from './components/NavBar'
@@ -51,6 +52,7 @@ function App() {
               <Route path='/products/BoneVANS' element={<Bone_Vans/>}/> 
               <Route path='/carrinho' element={<Carrinho/>}/>
               <Route path='/user' element={<User/>}/>
+              <Route path='/login' element={<Login/>}/>
             </Routes>
           </div>
           <Footer />

@@ -51,8 +51,10 @@ export const CarrinhoContextProvider = ({ children }) => {
 
     const [searchBox, setSearchBox] = useState([])
 
+    
+
     return (
-        <CarrinhoContext.Provider value={{ all_produtos,setAllProdutos,setProdutosCarrinho, produtos_carrinho, products, setProducts, searchBox, setSearchBox }}>
+        <CarrinhoContext.Provider value={{ all_produtos,setAllProdutos,setProdutosCarrinho, produtos_carrinho, products, setProducts, searchBox, setSearchBox}}>
             {children}
         </CarrinhoContext.Provider>
     )
