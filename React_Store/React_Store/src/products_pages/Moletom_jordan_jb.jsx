@@ -1,7 +1,7 @@
 import Slider from "../components/Slider"
 import './Moletom_jordan_jb.css'
-import Complete_outfit from "../components/complete_outfit"
-import Tamanhos from "../components/tamanhos"
+import Complete_outfit from "../components/Complete_outfit"
+import Tamanhos from "../components/Tamanhos"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
 import { AnimatePresence,motion } from "framer-motion"

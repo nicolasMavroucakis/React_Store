@@ -1,6 +1,6 @@
 import Slider from "../components/Slider"
 import './Moletom_jordan_jb.css'
-import Complete_outfit from "../components/complete_outfit"
+import Complete_outfit from "../components/Complete_outfit"
 import Tamanho_unico from "../components/Tamanho_unico"
 import Compr_but from "../components/Compr_but"
 import Frete from "../components/Frete"
